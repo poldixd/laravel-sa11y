@@ -1,0 +1,49 @@
+{
+  "name": "poldixd/laravel-sa11y",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/poldixd/laravel-sa11y",
+  "authors": [
+    {
+      "name": "Nils Poltmann",
+      "email": "dev@nils.li"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^11.0|^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.0|^10.0",
+    "pestphp/pest": "^4.0",
+    "pestphp/pest-plugin-laravel": "^4.0",
+    "laravel/pint": "^1.19"
+  },
+  "autoload": {
+    "psr-4": {
+      "poldixd\\Sa11y\\": "src/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "poldixd\\Sa11y\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "poldixd\\Sa11y\\Sa11yServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
