@@ -28,6 +28,14 @@ Include the following Blade component inside the `<head>` section of your layout
 
 When `SA11Y_ENABLED=true` is set in your environment, the Sa11y CDN script will be automatically injected into your application.
 
+If you are using a Content Security Policy, you can pass a CSP nonce to the component:
+
+```blade
+<x-sa11y :csp-nonce="csp_nonce()" />
+```
+
+The nonce will be added to the generated `<link>` and `<script>` tags.
+
 ## Configuration
 
 You can control Sa11y integration through the published config file (`config/sa11y.php`) or by setting environment variables.  
